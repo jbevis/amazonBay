@@ -9,13 +9,17 @@ const database = require('knex')(configuration);
 
 app.set('port', process.env.PORT || 3000);
 
-app.use(express.static(`${__dirname}/public`));
+app.use(express.static(`${__dirname}/client`));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', (request, response) => {
 	response.sendFile(path.join(__dirname, './client/index.html'));
 });
+
+// app.get('/', (request, response) => {
+// 	response.send('index.html')
+// });
 
 //Endpoints
 
