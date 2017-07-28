@@ -72,3 +72,10 @@ span {
 	width: 70%;
 }
 
+/*.hidden {
+	display: none;
+}*/
+
+.item-image {
+	width: 150px;
+}
