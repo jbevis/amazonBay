@@ -13,12 +13,12 @@
 	<main id="app">
 		
 		<aside id="order-history" class="app-asides">
-			<section class="aside-main hidden">
+			<section id="orders" class="aside-main hidden">
 				<h3 class="aside-title-expanded">Order History</h3>
 				<div id="order-card-holder" class="aside-card"></div>
 			</section>
 			<section class="aside-tab">
-				<div id="toggle-order-history" class="toggle-aside">-</div>
+				<div id="toggle-order-history" class="toggle-aside">+</div>
 				<div class="aside-title-collapsed">
 					<p>Order History</p>
 				</div>
@@ -28,17 +28,17 @@
 		<section class="inventory-gallery"></section>
 
 		<aside id="cart" class="app-asides">
-			<section class="aside-main hidden">
+			<section id="cart-list" class="aside-main hidden">
 				<h3 class="aside-title-expanded">Cart</h3>
 				<h5 id="items-list">Items</h5>
 				<div id="cart-card-holder" class="aside-card"></div>
-				<h5 id="total">$0.00</h5>
+				<h5>Cart Total: <span id="total">$0.00<span></h5>
 				<button class="checkout-btn">Checkout and Purchase</button>
 			</section>
-			<section class="aside-tab">
-				<div id="toggle-order-history" class="toggle-aside">-</div>
+			<section id="current-cart" class="aside-tab">
+				<div id="toggle-cart" class="toggle-aside">+</div>
 				<div class="aside-title-collapsed">
-					<p>Cart</p>
+					<p id="cart-tag">Cart</p>
 				</div>
 			</section>
 		</aside>
