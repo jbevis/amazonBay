@@ -17,13 +17,6 @@ app.get('/', (request, response) => {
 	response.sendFile(path.join(__dirname, './client/index.html'));
 });
 
-// app.get('/', (request, response) => {
-// 	response.send('index.html')
-// });
-
-//Endpoints
-
-//GET Requests
 app.get('/api/v1/inventory', (request, response) => {
 	database('inventory').select()
 	.then(inventory => {
@@ -56,7 +49,6 @@ app.get('/api/v1/orderHistory', (request, response) => {
 	});
 });
 
-//POST Requests
 app.post('/api/v1/inventory', (request, response) => {
 	const item = request.body
 
@@ -81,17 +73,17 @@ app.post('/api/v1/inventory', (request, response) => {
 
 app.post('/api/v1/orderHistory', (request, response) => {
 	const order = request.body
-
+	
 	for (let requiredParameter of ['total']) {
-		if (!item[requiredParameter]) {
+		if (!order[requiredParameter]) {
 			return response.status(422).json({
-				error: `Expected format: { total: <Decimal>. You are missing the ${requiredParameter} property.`
+				error: `Expected format: { total: <Decimal> }. You are missing the ${requiredParameter} property.`
 			});
 		}
 	}
 
 	database('order_history').insert(order, 'id')
-	.then(item => {
+	.then(order => {
 		response.status(201).json({ id: order[0] });
 	})
 	.catch(error => {

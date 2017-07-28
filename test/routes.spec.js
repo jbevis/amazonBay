@@ -156,7 +156,7 @@ describe('API Routes', () => {
 
 	describe('POST /api/v1/orderHistory', () => {
 
-		it('should add a new order to order history.', () => {
+		it('should add a new order to order history.', (done) => {
 			const newOrder = {
 				total: 500.00
 			};
@@ -173,16 +173,15 @@ describe('API Routes', () => {
 			});
 		});
 
-		it('should not add a new order if missing a required parameter', () => {
-			const badOrder = {};
+		it('should not add a new order if missing a required parameter', (done) => {
 
 			chai.request(server)
 			.post('/api/v1/orderHistory')
-			.send(badOrder)
+			.send({ thing: 'a million bucks' })
 			.end((error, response) => {
 				response.should.have.status(422);
 				response.should.be.json;
-				response.body.error.should.equal('total: <Decimal>. You are missing the total property.')
+				response.body.error.should.equal('Expected format: { total: <Decimal> }. You are missing the total property.')
 				done();
 			});
 		});

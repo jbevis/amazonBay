@@ -10,8 +10,8 @@ const items = [
     price: 1500.00
   },
   { title: 'East of Eden',
-    description: 'Set in the rich farmland of California’s Salinas Valley, this sprawling and often brutal novel follows the intertwined destinies of two families—the Trasks and the Hamiltons.',
-    image: 'https://images.gr-assets.com/books/1441547516l/4406.jpg',
+    description: 'Steinbeck\'s masterpiece, set in the rich farmland of California’s Salinas Valley.',
+    image: 'https://girlinthepages.com/wp-content/uploads/sites/146/2014/11/eastofeden-150x150.jpg',
     price: 15.99
   },
   { title: 'Climbing Rope',
@@ -25,7 +25,7 @@ const items = [
     price: 1299.00
   },
   { title: 'Sunglasses',
-    description: 'Stylish and functional shades for keeping the sun out of your eyes, and making you once cool cucumber.',
+    description: 'Stylish and functional shades for keeping the sun out of your eyes, and making you one cool cucumber.',
     image: 'https://cdn-us-ec.yottaa.net/53c4dce0ea2e0c13de0003b8/us.vonzipper.com/v~13.54/media/filter/l/img/smpfjelm_bpp_1.jpg?1416151294&yocs=1t_&yoloc=us',
     price: 99.00
   },
