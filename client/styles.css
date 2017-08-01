@@ -32,8 +32,7 @@ span {
 .app-asides {
 	border: 1px solid #1D1C75;
 	display: flex;
-/*	width: 10%;
-*/}
+}
 
 #cart {
 	flex-direction: row-reverse;
@@ -55,10 +54,10 @@ span {
 	align-items: center;
 }
 
-.aside-tab:hover {
+/*.aside-tab:hover {
 	cursor: pointer;
 	color: #13AF90;
-}
+}*/
 
 .toggle-aside{
 	display: flex;
@@ -84,9 +83,9 @@ span {
 	padding: 5px;
 }
 
-.aside-title-collapsed:hover {
+.toggle-aside:hover {
 	cursor: pointer;
-	background-color:;
+	color: #13AF90;
 }
 
 #cart-tag {
@@ -101,9 +100,9 @@ span {
 	max-width: 1000px;
 }
 
-	.hidden {
-		display: none;
-	}
+.hidden {
+	display: none;
+}
 
 .item-image {
 	width: 150px;
